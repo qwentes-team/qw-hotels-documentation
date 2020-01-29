@@ -1,0 +1,97 @@
+:root {
+  //--qw-hotel-primary-color: red;
+  //--qw-hotel-secondary-color: pink;
+}
+
+* {
+  color: $text-color;
+  box-sizing: border-box;
+}
+
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-color: $grey-color-light;
+}
+
+.wrapper {
+  padding: $gap-md;
+}
+
+a {
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+header, footer {
+  width: 100%;
+  
+  padding: 30px;
+  
+  background-color: $background-color;
+  color: $text-color;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  ul {
+    padding: 0;
+    
+    li {
+      display: inline-block;
+      padding: 10px;
+    }
+  }
+}
+
+section {
+  width: 100%;
+  padding: $gap-md;
+  margin: $gap-md 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $background-color;
+  
+  &:first-of-type {
+    margin-top: 0;
+  }
+  
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+// components
+
+.qw-basket-summary__room-delete .qw-button:after {
+  content: 'Delete';
+}
+
+.qw-input--error, .qw-select--error {
+  input, select {
+    border: 1px solid red;
+  }
+}
+
+.qw-room-base-info__person-icon span, .qw-room-rate__occupancy span {
+  background-image: url("../img/person.svg");
+}
+
+.qw-room-list-card__cta .qw-button:first-of-type {
+  display: none;
+}

@@ -1,0 +1,15 @@
+<header>
+  <div class="logo">
+    {% include logo.html %}
+  </div>
+  {% assign pages = site.pages | sort:"weight"  %}
+	<ul>
+		{% for page in pages %}
+		    {% if page.title and page.title != "Room Detail" %}
+		    <li>
+		        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+		    </li>
+		    {% endif %}
+		{% endfor %}
+	</ul>
+</header>
