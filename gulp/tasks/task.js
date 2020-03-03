@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp        = require('gulp'),
-    uglify      = require('gulp-uglify'),
     ngAnnotate  = require('gulp-ng-annotate'),
     browserSync = require('browser-sync'),
     htmlmin     = require('gulp-htmlmin'),
@@ -96,7 +95,7 @@ gulp.task('js', function() {
     gulp.src('./_site/js/prod/script.js')
     .pipe(sourcemaps.init())
     .pipe(ngAnnotate())
-    .pipe(uglify())
+    // .pipe(uglify())
     .on('error', console.error.bind(console))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./_site/js/prod'));

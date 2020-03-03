@@ -1,5 +1,5 @@
 const isProd = window.location.origin.includes('hotels-booking-engine');
-const basePath = isProd ? '/documentation' : '';
+const basePath = isProd ? '/demo' : '';
 const isRoomDetail = window.location.href.includes('/room-detail/');
 
 // Events Room List
